@@ -4,10 +4,13 @@ from django.http import HttpResponse
 
 def index(request):
     context = {'clase' : 'Aprendiendo Django'}
-    return HttpResponse("Login.html", context)
+    return HttpResponse("layout.html", context)
 
 def feed(request):
-    return render(request, 'DjangoUniApp/profile.html')
+    return render(request, 'Template/feed.html')
+
+def profile(request):
+    return render(request, 'Template/profile.html')
 
 def register():
 
